@@ -7,6 +7,8 @@ CREATE TABLE TEACHER(
     salary INT NOT NULL,
     subject_id INT REFERENCES SUBJECT(id)
     );
+   
+    ALTER TABLE TEACHER ADD CONSTRAINT salary_checker CHECK(salary > 150 AND salary < 10000);
 
 CREATE TABLE STUDENT(
     id serial PRIMARY KEY NOT NULL,
