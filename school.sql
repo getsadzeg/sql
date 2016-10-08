@@ -1,4 +1,4 @@
-CREATE TABLE TEACHER(
+﻿CREATE TABLE TEACHER(
     id SERIAL PRIMARY KEY NOT NULL,
     name VARCHAR(30) NOT NULL,
     surname VARCHAR(30) NOT NULL,
@@ -29,3 +29,21 @@ CREATE TABLE SUBJECT(
     id serial PRIMARY KEY NOT NULL,
     name VARCHAR(30) NOT NULL
     );
+
+CREATE TABLE MARK_WRITE(
+    teacher_id INT REFERENCES TEACHER(id),
+    student_id INT REFERENCES STUDENT(id),
+    mark INT CHECK(mark>=2 AND mark<=10),
+    date Date NOT NULL,
+    edited boolean,
+    comment VARCHAR(150)
+    );
+
+CREATE TABLE PROTOCOL_WRITE(
+    teacher_id INT REFERENCES TEACHER(id),
+    officer_id INT REFERENCES OFFICER(id),
+    type VARCHAR(30) NOT NULL,
+    date Date NOT NULL,
+    statement VARCHAR(150) NOT NULL
+    );
+    
