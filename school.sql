@@ -46,4 +46,14 @@ CREATE TABLE PROTOCOL_WRITE(
     date Date NOT NULL,
     statement VARCHAR(150) NOT NULL
     );
+
+INSERT INTO TEACHER (id, name, surname, birthdate, experience, salary) VALUES (1, 'name', 'surname', '1963-09-01', 15, 800);
+
+INSERT INTO STUDENT (id, name, surname, birthdate, class, classname) VALUES (1, 'name', 'surname', '2002-06-14', 9, 5);
+
+INSERT INTO OFFICER (id, name, surname) VALUES (1, 'name', 'surname');
+
+INSERT INTO SUBJECT (id, name) VALUES (1, 'math');
+
+INSERT INTO MARK_WRITE(teacher_id, student_id, mark, date, edited, comment) VALUES(1, 1, 10, '2016-10-10', FALSE, NULL);
     
