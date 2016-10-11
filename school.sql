@@ -56,4 +56,10 @@ INSERT INTO OFFICER (id, name, surname) VALUES (1, 'name', 'surname');
 INSERT INTO SUBJECT (id, name) VALUES (1, 'math');
 
 INSERT INTO MARK_WRITE(teacher_id, student_id, mark, date, edited, comment) VALUES(1, 1, 10, '2016-10-10', FALSE, NULL);
+
+INSERT INTO TEACHER (id, name, surname, birthdate, experience, salary) VALUES (2, 'secname', 'secsurname', '1967-08-01', 10, 800);
+
+INSERT INTO STUDENT (id, name, surname, birthdate, class, classname) VALUES (2, 'secname', 'secsurname', '2002-07-21', 10, 5);
+
+INSERT INTO PROTOCOL_WRITE(teacher_id, officer_id, type, date, statement) VALUES(2, 1, 'შენიშვნა', '2016-10-11', 'შენიშვნის ტესტი');
     
