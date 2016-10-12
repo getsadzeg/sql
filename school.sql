@@ -57,6 +57,8 @@ INSERT INTO SUBJECT (id, name) VALUES (1, 'math');
 
 INSERT INTO MARK_WRITE(teacher_id, student_id, mark, date, edited, comment) VALUES(1, 1, 10, '2016-10-10', FALSE, NULL);
 
+INSERT INTO MARK_WRITE(teacher_id, student_id, mark, date, edited, comment) VALUES(2, 2, 10, '2016-10-10', FALSE, NULL);
+
 INSERT INTO TEACHER (id, name, surname, birthdate, experience, salary) VALUES (2, 'secname', 'secsurname', '1967-08-01', 10, 800);
 
 INSERT INTO STUDENT (id, name, surname, birthdate, class, classname) VALUES (2, 'secname', 'secsurname', '2002-07-21', 10, 5);
@@ -69,5 +71,10 @@ UPDATE STUDENT SET name = 'niko', surname = 'adeishvili' WHERE id=2;
 
 SELECT (id, name, surname, birthdate, class, classname) FROM STUDENT ORDER BY id ASC, name ASC, surname ASC, birthdate ASC, class ASC, classname ASC; 
 
+SELECT (student_id, mark) FROM MARK_WRITE WHERE teacher_id = 1; /*selecting marks written by specified teachers, for specified subjects. 4th */ 
+
+SELECT (STUDENT.name, STUDENT.surname, MARK_WRITE.teacher_id, MARK_WRITE.mark) FROM MARK_WRITE INNER JOIN STUDENT ON MARK_WRITE.student_id = STUDENT.id WHERE student_id = 1;
+
+/* selecting specified student's all marks above. 3th */
 
     
