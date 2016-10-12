@@ -63,6 +63,10 @@ INSERT INTO STUDENT (id, name, surname, birthdate, class, classname) VALUES (2, 
 
 INSERT INTO PROTOCOL_WRITE(teacher_id, officer_id, type, date, statement) VALUES(2, 1, 'შენიშვნა', '2016-10-11', 'შენიშვნის ტესტი');
 
+UPDATE STUDENT SET name = 'guri', surname = 'getsadze' WHERE id = 1;
+
+UPDATE STUDENT SET name = 'niko', surname = 'adeishvili' WHERE id=2;
+
 SELECT (id, name, surname, birthdate, class, classname) FROM STUDENT ORDER BY id ASC, name ASC, surname ASC, birthdate ASC, class ASC, classname ASC; 
 
 
