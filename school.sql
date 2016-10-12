@@ -69,7 +69,7 @@ UPDATE STUDENT SET name = 'guri', surname = 'getsadze' WHERE id = 1;
 
 UPDATE STUDENT SET name = 'niko', surname = 'adeishvili' WHERE id=2;
 
-SELECT (id, name, surname, birthdate, class, classname) FROM STUDENT ORDER BY id ASC, name ASC, surname ASC, birthdate ASC, class ASC, classname ASC; 
+SELECT (id, name, surname, birthdate, class, classname) FROM STUDENT ORDER BY id ASC, name ASC, surname ASC, birthdate ASC, class ASC, classname ASC; /* 1st */
 
 SELECT (student_id, mark) FROM MARK_WRITE WHERE teacher_id = 1; /*selecting marks written by specified teachers, for specified subjects. 4th */ 
 
@@ -77,4 +77,6 @@ SELECT (STUDENT.name, STUDENT.surname, MARK_WRITE.teacher_id, MARK_WRITE.mark) F
 
 /* selecting specified student's all marks above. 3th */
 
-    
+SELECT (type, date, statement, OFFICER.name, OFFICER.surname) FROM PROTOCOL_WRITE INNER JOIN OFFICER ON PROTOCOL_WRITE.officer_id = OFFICER.id WHERE teacher_id = 2;
+
+/*selecting specified teacher's all protocols with officer's name and surname, too. 2th */    
