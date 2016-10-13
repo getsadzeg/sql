@@ -67,7 +67,7 @@ INSERT INTO PROTOCOL_WRITE(teacher_id, officer_id, type, date, statement) VALUES
 
 UPDATE STUDENT SET name = 'guri', surname = 'getsadze' WHERE id = 1;
 
-UPDATE STUDENT SET name = 'niko', surname = 'adeishvili' WHERE id=2;
+UPDATE STUDENT SET name = 'niko', surname = 'adeishvili' WHERE id = 2;
 
 SELECT (id, name, surname, birthdate, class, classname) FROM STUDENT ORDER BY id ASC, name ASC, surname ASC, birthdate ASC, class ASC, classname ASC; /* 1st */
 
@@ -75,8 +75,8 @@ SELECT (student_id, mark) FROM MARK_WRITE WHERE teacher_id = 1; /*selecting mark
 
 SELECT (STUDENT.name, STUDENT.surname, MARK_WRITE.teacher_id, MARK_WRITE.mark) FROM MARK_WRITE INNER JOIN STUDENT ON MARK_WRITE.student_id = STUDENT.id WHERE student_id = 1;
 
-/* selecting specified student's all marks above. 3th */
+/* selecting specified student's all marks above. 3rd */
 
 SELECT (type, date, statement, OFFICER.name, OFFICER.surname) FROM PROTOCOL_WRITE INNER JOIN OFFICER ON PROTOCOL_WRITE.officer_id = OFFICER.id WHERE teacher_id = 2;
 
-/*selecting specified teacher's all protocols with officer's name and surname, too. 2th */    
+/*selecting specified teacher's all protocols with officer's name and surname, too. 2nd */    
